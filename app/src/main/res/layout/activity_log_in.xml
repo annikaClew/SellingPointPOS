@@ -4,86 +4,89 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".LogInActivity">
 
     <Button
-        android:id="@+id/signup_btn"
+        android:id="@+id/initLogIn_btn"
         android:layout_width="333dp"
         android:layout_height="60dp"
         android:background="#000000"
         android:fontFamily="@font/open_sans_condensed_light"
-        android:text="Sign-Up"
+        android:text="Log-In"
         android:textSize="25sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.581" />
+        app:layout_constraintVertical_bias="0.697" />
+
+    <View
+        android:id="@+id/divider3"
+        android:layout_width="385dp"
+        android:layout_height="1dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.538"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.157" />
+
+    <View
+        android:id="@+id/divider5"
+        android:layout_width="385dp"
+        android:layout_height="1dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.615"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.823" />
 
     <TextView
-        android:id="@+id/textView"
-        android:layout_width="216dp"
-        android:layout_height="50dp"
+        android:id="@+id/welcometextView"
+        android:layout_width="383dp"
+        android:layout_height="71dp"
         android:fontFamily="@font/open_sans_condensed_bold"
-        android:text="Selling Point"
+        android:text="Welcome Back"
         android:textAlignment="center"
-        android:textColor="#095632"
+        android:textColor="@color/dark_green"
         android:textSize="38sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.057" />
+        app:layout_constraintVertical_bias="0.068" />
 
-    <View
-        android:id="@+id/divider1"
-        android:layout_width="385dp"
-        android:layout_height="1dp"
-        android:background="?android:attr/listDivider"
+    <EditText
+        android:id="@+id/editText_empName"
+        android:layout_width="372dp"
+        android:layout_height="74dp"
+        android:ems="10"
+        android:fontFamily="@font/open_sans_condensed_bold"
+        android:inputType="textPersonName"
+        android:text="Employee Name"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.153" />
+        app:layout_constraintVertical_bias="0.345" />
 
-    <View
-        android:id="@+id/divider2"
-        android:layout_width="385dp"
-        android:layout_height="1dp"
-        android:background="?android:attr/listDivider"
+    <EditText
+        android:id="@+id/edittext_pswrd"
+        android:layout_width="372dp"
+        android:layout_height="74dp"
+        android:ems="10"
+        android:fontFamily="@font/open_sans_condensed_bold"
+        android:inputType="textPersonName"
+        android:text="Password"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.384"
+        app:layout_constraintHorizontal_bias="0.512"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.809" />
+        app:layout_constraintVertical_bias="0.499" />
 
-    <Button
-        android:id="@+id/InitEmpLogIn_btn"
-        android:layout_width="333dp"
-        android:layout_height="60dp"
-        android:background="#000000"
-        android:fontFamily="@font/open_sans_condensed_light"
-        android:text="Employee Log-In"
-        android:textSize="25sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.349" />
-
-    <Button
-        android:id="@+id/initManagerLogIn_btn"
-        android:layout_width="333dp"
-        android:layout_height="60dp"
-        android:background="#000000"
-        android:fontFamily="@font/open_sans_condensed_light"
-        android:text="Manager Log-In"
-        android:textSize="25sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.466" />
 </androidx.constraintlayout.widget.ConstraintLayout>
