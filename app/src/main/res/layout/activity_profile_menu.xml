@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProfileMenuActivity">
+
+    <Button
+        android:id="@+id/checkout_btn"
+        android:layout_width="170dp"
+        android:layout_height="95dp"
+        android:fontFamily="@font/open_sans"
+        android:text="Checkout"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.875"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.962" />
+
+    <Button
+        android:id="@+id/financial_btn"
+        android:layout_width="170dp"
+        android:layout_height="95dp"
+        android:fontFamily="@font/open_sans"
+        android:text="Financial"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.875"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.814" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.212"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.215"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/UserName"
+        android:layout_width="132dp"
+        android:layout_height="46dp"
+        android:fontFamily="@font/open_sans"
+        android:text="User Name"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.215"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.109" />
+
+    <TextView
+        android:id="@+id/position_textview"
+        android:layout_width="132dp"
+        android:layout_height="46dp"
+        android:fontFamily="@font/open_sans"
+        android:text="Title"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.215"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.395" />
+
+    <Button
+        android:id="@+id/neworder_btn"
+        android:layout_width="170dp"
+        android:layout_height="95dp"
+        android:fontFamily="@font/open_sans"
+        android:text="New Order"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.091"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.514" />
+
+    <Button
+        android:id="@+id/tips_btn"
+        android:layout_width="170dp"
+        android:layout_height="95dp"
+        android:fontFamily="@font/open_sans"
+        android:text="Tips"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.091"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.663" />
+
+    <Button
+        android:id="@+id/reports_btn"
+        android:layout_width="170dp"
+        android:layout_height="95dp"
+        android:fontFamily="@font/open_sans"
+        android:text="Reports"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.091"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.812" />
+
+    <Button
+        android:id="@+id/refund_btn"
+        android:layout_width="170dp"
+        android:layout_height="95dp"
+        android:fontFamily="@font/open_sans"
+        android:text="Refund"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.091"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.962" />
+
+    <Button
+        android:id="@+id/tabs_btn"
+        android:layout_width="170dp"
+        android:layout_height="95dp"
+        android:fontFamily="@font/open_sans"
+        android:text="Tabs"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.875"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.514" />
+
+    <Button
+        android:id="@+id/notes_btn"
+        android:layout_width="170dp"
+        android:layout_height="95dp"
+        android:fontFamily="@font/open_sans"
+        android:text="Notes"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.875"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.663" />
+
+    <Button
+        android:id="@+id/settings_btn"
+        android:layout_width="182dp"
+        android:layout_height="53dp"
+        android:background="@color/dark_green"
+        android:backgroundTint="@color/dark_green"
+        android:drawableTint="@color/dark_green"
+        android:fontFamily="@font/open_sans"
+        android:text="Account Settings"
+        android:textColor="@color/white"
+        android:textColorLink="@color/dark_green"
+        app:icon="@color/dark_green"
+        app:iconTint="@color/dark_green"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.93"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.191"
+        app:rippleColor="@color/dark_green"
+        app:backgroundTint="@color/dark_green"/>
+
+    <Button
+        android:id="@+id/settings_btn2"
+        android:layout_width="182dp"
+        android:layout_height="53dp"
+        android:background="@color/dark_green"
+        android:backgroundTint="@color/dark_green"
+        android:drawableTint="@color/dark_green"
+        android:fontFamily="@font/open_sans"
+        android:text="Log Out"
+        android:textColor="@color/white"
+        android:textColorLink="@color/dark_green"
+        app:icon="@color/dark_green"
+        app:iconTint="@color/dark_green"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.93"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.302"
+        app:rippleColor="@color/dark_green"
+        app:backgroundTint="@color/dark_green"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
