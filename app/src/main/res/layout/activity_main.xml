@@ -18,7 +18,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.581" />
+        app:layout_constraintVertical_bias="0.512" />
 
     <TextView
         android:id="@+id/textView"
@@ -60,30 +60,17 @@
         app:layout_constraintVertical_bias="0.809" />
 
     <Button
-        android:id="@+id/InitEmpLogIn_btn"
+        android:id="@+id/InitLogIn_btn"
         android:layout_width="333dp"
         android:layout_height="60dp"
         android:background="#000000"
         android:fontFamily="@font/open_sans_condensed_light"
-        android:text="Employee Log-In"
+        android:text="Log-In"
         android:textSize="25sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.349" />
+        app:layout_constraintVertical_bias="0.391" />
 
-    <Button
-        android:id="@+id/initManagerLogIn_btn"
-        android:layout_width="333dp"
-        android:layout_height="60dp"
-        android:background="#000000"
-        android:fontFamily="@font/open_sans_condensed_light"
-        android:text="Manager Log-In"
-        android:textSize="25sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.466" />
 </androidx.constraintlayout.widget.ConstraintLayout>
