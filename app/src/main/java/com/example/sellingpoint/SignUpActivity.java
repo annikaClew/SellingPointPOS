@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -13,11 +14,17 @@ import android.widget.ImageButton;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
+
+import java.util.HashMap;
+import java.util.Map;
 
 public class SignUpActivity extends AppCompatActivity {
 
@@ -85,6 +92,8 @@ public class SignUpActivity extends AppCompatActivity {
                 registerUser(newUser);
 
 
+
+
             }
         });
     }
@@ -99,7 +108,12 @@ public class SignUpActivity extends AppCompatActivity {
                         if(task.isSuccessful())
                         {
                             Toast.makeText(SignUpActivity.this, "Account Successfully Created", Toast.LENGTH_SHORT).show();
-                            FirebaseUser user = auth.getCurrentUser();
+
+                            auth.signInWithEmailAndPassword(newUser.getEmail(), newUser.getPassword());
+                            FirebaseUser fbUser = auth.getCurrentUser();
+
+                            // add additional info into firebase
+                            addUserInfo(newUser, fbUser);
 
                             //sending new user to profile page
                             Intent intent = new Intent(SignUpActivity.this, ProfileMenuActivity.class);
@@ -111,6 +125,39 @@ public class SignUpActivity extends AppCompatActivity {
                             Toast.makeText(SignUpActivity.this, "Error" + task.getException(), Toast.LENGTH_SHORT).show();
                             System.out.println(task.getException());
                         }
+                    }
+                });
+    }
+
+    public void addUserInfo(User newUser, FirebaseUser fbUser)
+    {
+        // preparing data to be stored in firebase
+        FirebaseFirestore db = FirebaseFirestore.getInstance();
+        Map<String, Object> user = new HashMap<>();
+        user.put("email", newUser.getEmail());
+        user.put("firstName", newUser.firstname);
+        user.put("lastName", newUser.lastname);
+        user.put("position", newUser.position);
+        user.put("userID", fbUser.getUid());
+
+        db.collection("Users")
+                .add(user)
+                .addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
+                    @Override
+                    public void onSuccess(DocumentReference documentReference) {
+                        Log.d("dbfirebase", "save: " + user);
+                        String text = "Data save complete!";
+                        Toast toast = Toast.makeText(getApplicationContext(), text, Toast.LENGTH_SHORT);
+                        toast.show();
+                    }
+                })
+                .addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+                        Log.d("dbfirebase Failed", user.toString());
+                        String text = "You were unsuccessful at creating an account";
+                        Toast toast = Toast.makeText(getApplicationContext(), text, Toast.LENGTH_SHORT);
+                        toast.show();
                     }
                 });
     }
