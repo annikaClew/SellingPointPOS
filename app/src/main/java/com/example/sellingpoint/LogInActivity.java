@@ -18,6 +18,7 @@ public class LogInActivity extends AppCompatActivity {
         ImageButton goBack = findViewById(R.id.imageButtonBack);
         Button login = findViewById(R.id.SignUp_btn);
 
+
         goBack.setOnClickListener(new View.OnClickListener() { // when user selects back arrow
             @Override
             public void onClick(View view) { // go to login activity
