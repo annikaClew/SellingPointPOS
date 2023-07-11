@@ -40,13 +40,13 @@ public class SignUpActivity extends AppCompatActivity {
         // initializing elements
 
         ImageButton goBack = findViewById(R.id.imageButtonBack2);
-        Button signup = findViewById(R.id.SignUp_btn);
+        Button signup = findViewById(R.id.LogIn_btn);
         EditText email = findViewById(R.id.editText_useremail);
-        EditText firstname = findViewById(R.id.editText_empFirstName);
-        EditText lastname = findViewById(R.id.editText_empFirstName);
+        EditText firstname = findViewById(R.id.editText_emaillogin);
+        EditText lastname = findViewById(R.id.editText_emaillogin);
         EditText position = findViewById(R.id.editText_empPosition);
         EditText pswrd = findViewById(R.id.edittext_pswrd);
-        EditText rePswrd = findViewById(R.id.edittext_Repswrd);
+        EditText rePswrd = findViewById(R.id.edittext_pswrdlogin);
 
         // when user selects back arrow
         goBack.setOnClickListener(new View.OnClickListener() {
