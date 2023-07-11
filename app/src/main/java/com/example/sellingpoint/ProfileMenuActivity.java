@@ -26,6 +26,7 @@ public class ProfileMenuActivity extends AppCompatActivity {
         setContentView(R.layout.activity_profile_menu);
 
         Button logout_btn = findViewById(R.id.logout_btn);
+        Button neworder_btn = findViewById(R.id.neworder_btn);
 
         FirebaseFirestore db = FirebaseFirestore.getInstance();
         FirebaseAuth auth = FirebaseAuth.getInstance();
@@ -59,6 +60,14 @@ public class ProfileMenuActivity extends AppCompatActivity {
             public void onClick(View view) {
                 FirebaseAuth.getInstance().signOut();
                 startActivity(new Intent(getApplicationContext(), LogInActivity.class));
+                finish();
+            }
+        });
+
+        neworder_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getApplicationContext(), OrderActivity.class));
                 finish();
             }
         });
